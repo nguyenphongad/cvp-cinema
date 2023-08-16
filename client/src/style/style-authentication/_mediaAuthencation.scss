@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) {
+    .wrap__header__top {
+        padding: 10px 30px !important;
+    }
+    .wrap__body--authencation {
+        padding: 20px 30px !important;
+        .form__groups {
+            padding: 20px !important;
+        }
+    }
+}
+@media only screen and (max-width: 375px) {
+    .border__menu{
+        width: 180px !important;
+    }
+    .wrap__header__top {
+        padding: 10px 15px !important;
+    }
+    .wrap__body--authencation {
+        padding: 20px 15px !important;
+        .form__groups {
+            padding: 15px !important;
+        }
+        .heading__text--wg {
+            font-size: 39px !important;
+        }
+    }
+}

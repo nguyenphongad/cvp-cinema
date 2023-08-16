@@ -1,0 +1,133 @@
+.wrap__setting {
+    width: 100%;
+    padding: 100px 0px 200px 0px;
+    .body__setting {
+        width: 80%;
+        margin: 0px auto;
+        animation: an_scale 0.6s forwards;
+        @keyframes an_scale {
+            from {
+                transform: scale(0.92);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        .tbody__frame-setting {
+            width: 100%;
+            .border_avatar_user {
+                padding: 10px;
+                @include styleDisFlexCenter;
+                .border-img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            .setting__box {
+                width: 100%;
+                .heading_list {
+                    font-size: 35px;
+                    font-weight: 700;
+                    padding: 25px 0px;
+                    border-bottom: 2px solid;
+                }
+                .info__tr {
+                    width: 98%;
+                    margin: 0px auto;
+                    @include styleDisFlexCenter;
+                    border-bottom: 1px solid #666060;
+                    transition: all 0.2s;
+                    background-color: #0000000c;
+                    .item__info {
+                        width: 100%;
+                        text-align: center;
+                        padding: 15px 20px;
+                        @include styleDisFlexCenter;
+                        justify-content: left;
+                        font-size: 20px;
+                    }
+                    .td__name {
+                        flex: 2.5;
+                        font-weight: 500;
+                        font-size: 22px;
+                    }
+                    .td__name--user {
+                        flex: 4;
+                        .text_name--user {
+                            color: #d6d5d5;
+                        }
+                    }
+                    .td__edit {
+                        flex: 4;
+                        // @include styleDisFlexCenter;
+                        justify-content: right;
+                        button {
+                            border: none;
+                            outline: none;
+                            background: #ff00009c;
+                            color: #ffffff;
+                            padding: 10px 15px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            font-weight: 600;
+                            font-size: 15px;
+                            @include styleDisFlexCenter;
+                            svg {
+                                margin-right: 10px;
+                            }
+                            &:hover {
+                                background-color: #ff0000d7;
+                            }
+                        }
+
+                        input[type="checkbox"] {
+                            &.toggleAutoPlay {
+                                appearance: none;
+                                width: 60px;
+                                cursor: pointer;
+                                height: 30px;
+                                margin-right: 12px;
+                                border: 2px solid #726c6c;
+                                position: relative;
+                                border-radius :30px;
+                                transition :all 0.3s;
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 22px;
+                                    height: 22px;
+                                    background-color: #b8a7a7;
+                                    top: 2px;
+                                    left: 3px;
+                                    border-radius :100%;
+                                    transition :all 0.3s;
+                                }
+                            }
+                            &.toggleAutoPlay:hover{
+                                &::after{background-color: $main-color-while;}
+                            }
+                            &:checked.toggleAutoPlay {
+                                background:  #aa0e0e  ;
+                                border: 2px solid #00000000;
+                                &:after {
+                                    left: 30px;
+                                    background-color: #ddd4d4;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        background-color: #0000003f;
+                    }
+                }
+            }
+        }
+    }
+}

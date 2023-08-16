@@ -1,0 +1,202 @@
+.container__authentication {
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        user-select: none;
+    }
+
+    .front__animation_logo-top {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        background-color: $main-color;
+
+        .wrap__authentication {
+            .text__logo {
+                width: 500px;
+                animation: an_trans_logo_intro 0.8s forwards;
+
+                @keyframes an_trans_logo_intro {
+                    from {
+                        transform: translateY(50px);
+                        opacity: 0;
+                    }
+
+                    to {
+                        transform: translateY(0px);
+                        opacity: 1;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .body_form--auth {
+        width: 100%;
+
+        .header__top--empty {
+            width: 100%;
+            background-color: #272835;
+
+            .wrap__header__top {
+                padding: 10px 50px;
+
+                .border__menu {
+                    width: 250px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .wrap__body--authencation {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .form_ifame_authentication {
+        width: 700px;
+        background-color: #272835;
+        margin-bottom: 50px;
+
+        .form__groups {
+            padding: 30px 50px;
+        }
+    }
+
+    .group__input {
+        margin-top: 25px;
+
+        .label__input {
+            font-size: 21px;
+            font-weight: 600;
+            color: #e2e2e2;
+        }
+
+        .tr__line-input {
+            position: relative;
+
+            .line__input {
+                width: 100%;
+                height: 45px;
+                background: none;
+                border: none;
+                border-radius: 2px;
+                margin-top: 7px;
+                border-bottom: 1px solid #bbbbbb;
+                background-color: #313136;
+                font-size: 18px;
+                padding-left: 15px;
+                padding-right: 45px;
+                outline: none;
+                transition: all 0.4s;
+
+                &:focus {
+                    background-color: #3d3d41;
+                    border-bottom: 1px solid #ffffff;
+                }
+            }
+
+            .icon__right--type {
+                height: 30px;
+                position: absolute;
+                right: 10px;
+                top: 15px;
+                font-size: 27px;
+                cursor: text;
+                overflow: hidden;
+
+                .wrap_icon_right {
+                    transition: all 0.2s;
+                    display: block;
+
+                    svg {
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                }
+
+                path {
+                    color: #a1a1a1;
+                }
+                .wrap_icon_right {
+                    cursor: pointer;
+                }
+                .active_focus_pass {
+                    transform: translateY(-35px);
+                }
+            }
+        }
+    }
+
+    .nuti_btn_fort-pass {
+        margin-top: 10px;
+        text-align: right;
+    }
+
+    .btn__submit--handle {
+        width: 100%;
+        height: 50px;
+        padding: 0px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        background-color: $main-color_red_noti;
+        border-radius: 5px;
+        transition: all 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+
+        svg {
+            margin-right: 10px;
+            font-size: 17px;
+        }
+        button {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: pointer;
+            border: none;
+            font-size: 20px;
+            background: transparent;
+        }
+
+        &:hover {
+            background-color: #bd1818;
+        }
+        .wrap_loading_route {
+            height: 100% !important;
+            .body_load-route {
+                transform: scale(0.3);
+            }
+        }
+    }
+}
+
+.heading__text--wg {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+@import "./mediaAuthencation";

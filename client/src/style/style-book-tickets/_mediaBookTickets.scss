@@ -1,0 +1,38 @@
+.wrap__book-tickets {
+    .body_tickets {
+        @media only screen and (max-width: 768px) {
+            padding: 100px 30px !important;
+
+            @media only screen and (max-width: 545px) {
+                padding: 100px 15px !important;
+
+                @media only screen and (max-width: 423px) {
+                    padding: 100px 10px !important;
+
+                    @media only screen and (max-width: 423px) {
+                        padding: 100px 5px !important;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 960px) {
+        .item_select-type-book {
+            button {
+                font-size: 18px !important;
+            }
+        }
+        .btn_to_history-book{
+            a{
+                font-size: 18px !important;
+            }
+        }
+    }
+    .wrap_border_content-tab-booking {
+        @media only screen and (max-width: 1000px) {
+            .slick-slide {
+                margin: 0px 12px !important;
+            }
+        }
+    }
+}

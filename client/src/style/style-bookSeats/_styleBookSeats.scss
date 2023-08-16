@@ -1,0 +1,184 @@
+.wrap_steps_booking_tickets {
+    width: 100%;
+    // height: 55px;
+    background-color: #1d1e27;
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    z-index: 2;
+    border-top: 1px solid #302f2f;
+    .flex_line_steps {
+        display: flex;
+        justify-content: center;
+        .item_steps {
+            margin: 10px 40px;
+            display: flex;
+            .margin_content_text {
+                text-align: center;
+                svg {
+                    font-size: 27px;
+                }
+                .text_min_step {
+                    font-size: 12px;
+                }
+            }
+            .arrow_right_step {
+                margin-left: 80px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+.wrap_book_seat {
+    padding: 100px 50px;
+
+    .wrap_handle-book-seats {
+        display: flex;
+        margin-top: 50px;
+
+        .body_view_selected_seats {
+            // width: 100%;
+            .seat_Row {
+                display: flex;
+                &:last-child {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                > div {
+                    width: 40px;
+                    margin: 4px;
+                }
+            }
+            .container_list_seats {
+                padding: 0px 40px;
+                .btn_seats {
+                    padding: 2px 2px 6px 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $backColor_btn_seat;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    border-bottom: none;
+                    transition: 0.4s;
+                    color: #ffffff;
+                    user-select: none;
+                    position: relative;
+
+                    &::before {
+                        width: 100%;
+                        height: 3px;
+                        background-color: $backColor_btn_seat_before;
+                        content: "";
+                        position: absolute;
+                        bottom: 0px;
+                        border-left: 2px solid $backColor_btn_seat_before;
+                        border-right: 2px solid $backColor_btn_seat_before;
+                        border-radius: 3px;
+                    }
+                }
+                .seats_disabled {
+                    background-color: $backColor_btn_seat_disabled !important;
+                    cursor: not-allowed !important;
+                    &::before {
+                        background: none !important;
+                        border: none !important;
+                    }
+                }
+                .seats_selected {
+                    background-color: $backColor_btn_seat_selected !important;
+                    border: 2px solid;
+                    border-bottom: none;
+                    &::before {
+                        background: none !important;
+                        border: none;
+                        border-bottom: 2px solid;
+                    }
+                }
+                .seats_fisrt_regular {
+                    background-color: $backColor_btn_seat_regular;
+                }
+                .seats_couple {
+                    width: 90px !important;
+                    background-color: $backColor_btn_seat_couple;
+                }
+                .btn_seats:not(.seats_disabled):not(.seats_selected):hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .total_info--select_seats {
+            width: 100%;
+            padding: 20px 0px;
+            margin-left: 50px;
+            .view_task_seat {
+                background-color: #1d1e27;
+                padding: 10px 30px;
+                .flex_row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    .col_view {
+                        width: 150px;
+                        display: flex;
+                        margin: 8px 15px;
+                        .seat_color_view {
+                            width: 25px;
+                            height: 20px;
+                            border-radius: 4px;
+                        }
+                        .seat_sold {
+                            background-color: $backColor_btn_seat_disabled;
+                        }
+                        .seat_yours {
+                            background-color: $backColor_btn_seat_selected;
+                            border: 2px solid;
+                        }
+                        .seat_regular {
+                            background-color: $backColor_btn_seat_regular;
+                        }
+                        .seat_vip {
+                            background-color: $backColor_btn_seat;
+                        }
+                        .seat_couple {
+                            background-color: $backColor_btn_seat_couple;
+                        }
+                        .content_view {
+                            font-size: 15px;
+                            font-weight: 600;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+            .box_total_price-seat{
+                padding:20px 40px;
+                background-color: #1d1e27;
+                margin-top: 10px;
+            }
+
+
+
+        }
+
+        .total-info {
+            padding: 0px 50px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .before_screen_line {
+            text-align: center;
+            margin-bottom: 40px;
+            .border__line-screen {
+                width: 100%;
+                height: 5px;
+                background-color: $main-color-while-fff;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+        }
+    }
+}

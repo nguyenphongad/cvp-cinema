@@ -1,0 +1,415 @@
+.header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+
+    .trow__header--tr {
+        width: 100%;
+        height: 100%;
+        padding: 10px 50px;
+        background-color: #0F0F0F;
+        background-image: linear-gradient(180deg, #000000b3 10%, transparent);
+        
+        @include styleDisFlexCenter;
+        .box_name-logo {
+            height: 100%;
+
+            .border-logo {
+                height: 100%;
+                
+
+                img {
+                    max-height: 100%;
+                }
+
+                .img_name {
+                    display: block;
+                }
+
+                .img_logo {
+                    display: none;
+                }
+            }
+        }
+
+        .box_menu-heading {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            .border_location-menu {
+                height: 100%;
+                margin:0px 20px;
+                position: relative;
+
+                >a {
+                    width: 100%;
+                    height: 100%;
+                    @include styleDisFlexCenter();
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                    user-select: none;
+                    transition: all 0.4s;
+                    opacity: 0.80;
+                    white-space: nowrap;
+
+                    >svg {
+                        margin-right: 8px;
+                    }
+                }
+
+                >a.active {
+                    pointer-events: none;
+                    color: $main-color-while-fff;
+                    opacity: 1;
+                    font-weight: 700;
+                }
+
+                .animation_start-new {
+                    margin-top: -17px;
+                    margin-left: 5px;
+
+                    svg {
+                        font-size: 7px;
+                        animation: an_star_new 1.2s ease infinite;
+
+                        @keyframes an_star_new {
+                            0% {
+                                transform: scale(0);
+                            }
+
+                            50% {
+                                transform: scale(1.5);
+                            }
+
+                            100% {
+                                transform: scale(1);
+                            }
+                        }
+
+                        path {
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+
+            .line-hover {
+                width: 100%;
+                height: 2px;
+                background-color: red;
+                display: none;
+                animation: an_line_hover 0.3s forwards;
+
+                @keyframes an_line_hover {
+                    from {
+                        transform: scaleX(0);
+                    }
+
+                    to {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+
+            .border_location-menu:hover .line-hover {
+                display: block;
+            }
+        }
+
+
+        //responsive
+
+        .box_bottom_navbar-respon{
+            width: 100%;height: 50px;
+            background-color: #000;
+            position: fixed;
+            z-index: 19;
+            bottom: 0px ;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #818181;
+            animation: an_bottom_navbar-repon 0.5s forwards;
+            @keyframes an_bottom_navbar-repon {
+                from {
+                    bottom: -100px;
+                }
+                to{
+                    bottom : 0px
+                }
+            }
+        }
+
+        .box_navigation {
+            height: 100%;
+            @include styleDisFlexCenter();
+            justify-content: right;
+
+            .row-section--nav {
+                @include styleDisFlexCenter;
+
+                >div {
+                    margin-left: 20px;
+                }
+
+                .btn_section {
+                    height: 100%;
+                    position: relative;
+
+                    button {
+                        background: none;
+                        border: none;
+                        padding: 0px !important;
+                        cursor: pointer;
+
+                        svg {
+                            font-size: 34px;
+                        }
+                    }
+                }
+
+                .btn_section_notification {
+                    height: 100%;
+                    position: relative;
+                    z-index: 3;
+
+                    button {
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                    }
+
+                    .box_drops-notification {
+                        width: max-content;
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        right: 0px;
+                        margin-top: 12px;
+                        background: $main-color-brg;
+
+                        .body__drop {
+                            width: 100%;
+                            height: 100%;
+                            overflow: auto;
+                            padding: 0px 0px 5px 0px;
+                            border-top: 3px solid;
+
+                            .item_list--noti {
+                                border-bottom: 1px solid #ffffff46;
+                                padding: 10px 15px;
+                                transition: all 0.4s;
+
+                            }
+                        }
+                    }
+                }
+
+                .btn_dropdown-account {
+                    height: 100%;
+                    position: relative;
+
+                    .border-drop {
+                        width: 40px;
+                        height: 40px;
+                        padding: 2px;
+                        border: 1px solid #ffffff46;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        background: none;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 100%;
+                        }
+                    }
+
+                    .box_drops-account {
+                        width: max-content;
+                        position: absolute;
+                        right: 0px;
+                        margin-top: 8px;
+
+                        .body__drop {
+                            background: $main-color-brg;
+                            flex-direction: column;
+                            display: flex;
+                            border-top: 3px solid;
+
+                            .item_select-drop {
+                                margin: 5px 0px;
+                                a {
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 13px 20px;
+                                    text-decoration: none;
+                                    @include styleDisFlexCenter;
+                                    justify-content: left;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    user-select: none;
+                                    transition: all 0.4s;
+
+                                    svg {
+                                        transition: all 0.4s;
+                                    }
+
+                                    span {
+                                        margin-left: 20px;
+                                        margin-right: 40px;
+                                        transition: all 0.4s;
+                                    }
+
+                                    &:hover {
+                                        background-color: #000000b9;
+
+                                        span {
+                                            transform: translateX(7px);
+                                        }
+
+                                        svg {
+                                            transform: scale(1.6);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .waring_hover {
+                                border-top: 1px solid #ffffff46;
+                            }
+
+                            .waring_hover:hover {
+                                a {
+                                    background-color: #ff00009f;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// box search
+.box_search {
+    width: 100%;
+    margin-top: 20px;
+    position: fixed;
+    z-index: 9;
+    left: 0px;
+    top: 60px;
+
+    .body_trans--search {
+        width: 80%;
+        @include styleDisFlexCenter;
+        flex-direction: column;
+        margin: 0px auto;
+
+        .border_input {
+            width: 100%;
+            background: #000000;
+            position: relative;
+
+            .button_change--input {
+                width: 100%;
+                height: 100%;
+                @include styleDisFlexCenter;
+                justify-content: left;
+
+                .button__search--size {
+                    width: 40px;
+                    height: 100%;
+                    position: absolute;
+                    @include styleDisFlexCenter;
+                    margin-left: 5px;
+
+                    svg {
+                        font-size: 28px;
+                    }
+                }
+
+                .box__contain-in {
+                    width: 100%;
+                    height: 100%;
+                    @include styleDisFlexCenter;
+                    justify-content: right;
+
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px 70px;
+                        background: none;
+                        border: none;
+                        outline: none;
+                        color: #ffffff;
+                        font-size: 20px;
+                        text-align: center;
+                        border-top: 3px solid $main-color-while;
+                        transition: all 0.3s;
+                    }
+
+                    .btn__reset-input {
+                        width: 40px;
+                        position: absolute;
+                        margin-right: 5px;
+
+                        .border__btn--reset {
+                            width: 100%;
+                            height: 100%;
+                            @include styleDisFlexCenter;
+                            cursor: pointer;
+
+                            pointer-events: none;
+                            opacity: 0.3;
+
+                            svg {
+                                font-size: 30px;
+                            }
+                        }
+
+                        .enable_btn-reset {
+                            pointer-events: unset;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.activeDropBoxSearch {
+    transform: translateY(0px);
+    transition: 0.4s;
+}
+
+.inactiveDropBoxSearch {
+    transform: translateY(-200px);
+    transition: 0.4s;
+}
+
+.activeDropHeader {
+    opacity: 1;
+    transition: 0.2s;
+    transform: scale(1);
+}
+
+.inactiveDropHeader {
+    opacity: 0;
+    transition: 0.2s;
+    transform: scale(0);
+}
+
+
+
+// responsive
+@import "./mediaHeader";
+

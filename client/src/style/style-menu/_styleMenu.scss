@@ -1,0 +1,107 @@
+.wrap_menu {
+    width: 100%;
+
+    .body__menu {
+        padding: 100px 50px;
+
+        .preview__box-account {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 2px solid;
+            background-color: #ffffff17;
+            padding: 10px 15px;
+            text-decoration: none;
+
+            .row__preview {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .border_image-avatar {
+                    width: 45px;
+                    height: 45px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+
+            .td-name_account {
+                margin-top: 10px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+        }
+
+        .item_select_menu-mobile {
+            width: 100%;
+            @include styleDisFlexCenter;
+            justify-content: left;
+            border-bottom: 2px solid;
+            background-color: #ffffff07;
+            margin-top: 20px;
+            padding: 10px;
+            text-decoration: none;
+
+            .szing-left_outline {
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                font-size: 16px;
+                white-space: nowrap;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+
+            .icon_outline-right {
+                width: 100%;
+                // justify-content: right;
+                text-align: right;
+            }
+
+            .waring_log_out {
+                width: 100%;
+                justify-content: center !important;
+                text-align: center !important;
+            }
+        }
+
+
+
+    }
+}
+
+
+
+
+@media only screen and (max-width: 425px) {
+    .wrap_menu {
+        .body__menu {
+            padding: 50px 15px;
+
+            .heading_text {
+                font-size: 17px !important;
+
+                svg {
+                    font-size: 25px !important;
+                    margin-right: 10px !important;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 425px) {
+    .wrap_menu {
+        .body__menu {
+            padding: 50px 10px;
+        }
+    }
+}
