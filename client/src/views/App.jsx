@@ -44,10 +44,14 @@ function App() {
                     </>
                     :
                     <> */}
-                      {isTokenAuthExists ?<RenderHeader />: ""}
+                      {/* {isTokenAuthExists ?<RenderHeader />: ""} */}
+                      <RenderHeader/>
                       <ToastContainer
                         position="bottom-center"
                         theme="dark"
+                        closeButton={false}
+                        autoClose={4000}
+                        draggable={false}
                       />
                       <RouterBody />
                       <RenderFooter />

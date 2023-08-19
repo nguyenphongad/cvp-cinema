@@ -13,7 +13,7 @@ import { BiFilterAlt } from 'react-icons/bi'
 
 function RenderBookTicketsHistory() {
 
-    document.title = "Book tickets history | CVP-MOVIE"
+    document.title = "Book tickets history | CVP-MOVIE";
 
     const listTicketsBooked = [
         {
@@ -117,13 +117,13 @@ function RenderBookTicketsHistory() {
                 </div>
             </div>
         )
-    })
+    });
 
     return (
         <div className='wrap__booking-history animation_scale-lg'>
             <div className="body_book-history-tickets">
                 <div className="heading_text">
-                    <Link to="../">
+                    <Link to="/book-tickets">
                         <AiOutlineDoubleLeft />
                         BOOK TICKETS
                     </Link>

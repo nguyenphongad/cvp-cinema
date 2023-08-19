@@ -14,6 +14,8 @@ import RenderModalPreviewPlaying from '../../components/pages/BookTickets/ModalP
 
 const LazyBookTickets = lazy(() => import('../../components/pages/BookTickets/RenderBookTickets'));
 const LazyCinemas = lazy(() => import('../../components/pages/Cinemas/RenderCinemas'));
+const LazyPopcorn = lazy(() => import('../../components/pages/Popcorn/RenderPopCorn'));
+const LazyNews = lazy(() => import('../../components/pages/News/RenderNews'));
 const LazyLayoutBookSeats = lazy(() => import('../../components/pages/BookTickets/TabBookTickets/BookSeats/RenderLayoutBookSeats'));
 const LazyMenu = lazy(() => import('../../components/pages/Menu/RenderMenu'));
 const LazyBookTicketsHistory = lazy(() => import('../../components/pages/BookTickets/BookTicketsHistory/RenderBookTicketsHistory'));
@@ -46,6 +48,16 @@ function RouterBody() {
         {
             path: "/cinemas",
             element: <LazyCinemas />,
+            lazyLoading: true
+        },
+        {
+            path: "/popcorn",
+            element: <LazyPopcorn />,
+            lazyLoading: true
+        },
+        {
+            path: "/news",
+            element: <LazyNews />,
             lazyLoading: true
         },
         {

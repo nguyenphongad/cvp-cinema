@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { MdFastfood, MdOutlineFeed, MdTheaters } from 'react-icons/md';
-import { IoTicketSharp } from 'react-icons/io5';
+import { IoNewspaperSharp, IoTicketSharp } from 'react-icons/io5';
 import { IoIosMenu } from 'react-icons/io';
 import { BsStarFill } from 'react-icons/bs';
 
@@ -46,7 +46,7 @@ function RenderCustomMenu() {
             id: 5,
             to: "/news",
             nameMenuHeader: "NEWS",
-            iconMenuHeader: <MdOutlineFeed />,
+            iconMenuHeader: <IoNewspaperSharp />,
             starNew: true
         },
         

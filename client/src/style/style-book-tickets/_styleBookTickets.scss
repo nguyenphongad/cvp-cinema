@@ -473,6 +473,7 @@
                             .ant-collapse-header {
                                 height: 80px !important;
                                 background-color: #2d2e3d;
+                                border-radius: 0px !important;
                             }
 
                             .ant-collapse-content {
@@ -503,9 +504,6 @@
 
                             .item_box_collapse--cin-single {
                                 border: none;
-                                // color: $main-color-while-fff;
-                                // border-left: 1px solid;
-                                // border-right: 1px solid;
 
                                 .ant-collapse-header {
                                     height: max-content !important;
